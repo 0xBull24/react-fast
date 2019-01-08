@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import Peoplecard from './components/PeopleCard'
+import Navbar from './components/Navbar'
 // import people from './people.json'
 
 class App extends Component {
 
   // state = {
-  //   people;
+  //   people:,
+  //   currentScore:,
+  //   highScore:,
+  //   selectedPeople:,
   // }
 
   // App Check
@@ -21,7 +25,10 @@ class App extends Component {
   // Render these components to the page
   render() {
     return (
-      <Peoplecard />
+      <div>
+        <Navbar />
+        <Peoplecard />
+      </div>
     )
   };
 }
