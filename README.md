@@ -1,32 +1,40 @@
 # React Based Memory Game
 
-Description Goes here
+This game will load a number of 'cards' for the player to go through and click each one only once. Once any card is clicked, all of the cards on the page will be shuffled. If you click the same card more than once the game will reset. Try to see if you can complete the challenge!
 
 ## Prerequisites
 
-Any thing needed
+If you want to run this code locally just make sure you to have `npm` or `yarn` and run the following command:
 
-```bash
-node -v
+```yarn
+yarn install
 ```
 
-### Installing
+or
 
-How to install if anything is needed
-
-```bash
+```npm
 npm install
 ```
 
 ## Running the application
 
-How to run the application (include gifs for guidance)
+The application should start a dev server to see the code local being executed in the default browser. You can go to `http://localhost:3000` in any browser to see it perform any in web browser.
 
-```node
-node
+Run the following command to see it ran:
+
+```yarn
+yarn start
+```
+
+or
+
+```npm
+npm start
 ```
 
 ## Built With
+
+ [React](https://www.npmjs.com/package/react) - React UI framework
 
 ## Authors
 
