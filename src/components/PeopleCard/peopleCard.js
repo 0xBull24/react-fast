@@ -6,21 +6,11 @@ const PeopleCard = props => (
         <div className='col s3'>
             <div className='card'>
                 <div className='card-image'>
-                    <img alt={props.name} src={props.image} />
+                    <img 
+                    alt={props.name} 
+                    src={props.img}
+                    onClick={() => {props.handleClick(props.id)}} />
                 </div>
-                <div className='content'>
-                    <ul>
-                        <li>
-                            <strong>Name: </strong> {props.name}
-                        </li>
-                        <li>
-                            <strong>Location: </strong> {props.name}
-                        </li>
-                    </ul>
-                </div>
-                <span onClick={() => {props.shufflePeople(props.shufflePeople)}} className='pulse'>
-                    Shuffle
-                </span>
             </div>
         </div>
     </div>
