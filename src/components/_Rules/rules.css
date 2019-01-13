@@ -1,0 +1,10 @@
+.container-fluid {
+    border-bottom: 2px solid gray;
+    margin-bottom: 15px;
+    background-color: #2F2F2F;
+}
+
+h2 {
+    margin: 0;
+    padding-top: 25px;
+}

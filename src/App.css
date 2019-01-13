@@ -30,3 +30,11 @@
     transform: rotate(360deg);
   }
 }
+
+body, .container {
+  background-color: #2F2F2F;
+}
+
+* {
+  font-family: 'Press Start 2P', cursive;
+}

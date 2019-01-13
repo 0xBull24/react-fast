@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Peoplecard from './components/PeopleCard'
 import Navbar from './components/Navbar'
+import Rules from './components/_Rules'
 import people from './people.json'
+import './App.css'
 const shuffle = require('shuffle-array');
 
 class App extends Component {
@@ -82,6 +84,7 @@ class App extends Component {
         <Navbar 
         currentScore={this.state.currentScore}
         highScore={this.state.highScore}/>
+        <Rules />
         <div className='container'>
           <div className='row'>
             {this.state.people.map(people => {

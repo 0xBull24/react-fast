@@ -5,7 +5,7 @@ const Navbar = props => (
     <div className='navbar-fixed'>
         <nav>
             <div className="nav-wrapper">
-                <a href='/' className="brand-logo center">Reactive Memory</a>
+                <a href='/' className="brand-logo center">X-Men Memory</a>
                 <ul id="nav-mobile" className="left hide-on-med-and-down">
                     <li>Current Score: {props.currentScore}</li>
                 </ul>
