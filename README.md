@@ -34,7 +34,8 @@ npm start
 
 ## Built With
 
- [React](https://www.npmjs.com/package/react) - React UI framework
+* [React](https://www.npmjs.com/package/react) - React UI framework
+* [Shuffle-Array](https://www.npmjs.com/package/shuffle-array) - Shuffle Arrays
 
 ## Authors
 
