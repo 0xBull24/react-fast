@@ -13,10 +13,10 @@ class App extends Component {
     selectedPeople: [],
   }
 
-  // App Check
+  // On load shuffle the json
   componentDidMount() {
-    console.log('Components are loaded');
-    console.log(this.state);
+    const newShuffle = this.shufflePeople(this.state.people);
+    this.setState({ people: newShuffle});
   };
 
   // Shuffle people from the json
@@ -52,6 +52,29 @@ class App extends Component {
     this.setState({ people, currentScore: newScore });
   }
 
+  // If same image is clicked, handle it by setting the highscore
+  // and reset the game
+  handleHighscore = () => {
+    
+    if(this.state.currentScore > this.state.highScore) {
+      const people = this.shufflePeople();
+      const highestScore = this.state.currentScore
+      this.setState({
+        people,
+        currentScore: 0,
+        highScore: highestScore,
+        selectedPeople: []
+      });
+    } else {
+      const people = this.shufflePeople();
+      this.setState({
+        people,
+        currentScore: 0,
+        selectedPeople: []
+      });
+    }
+  }
+
   // Render these components to the page
   render() {
     return (
@@ -59,7 +82,19 @@ class App extends Component {
         <Navbar 
         currentScore={this.state.currentScore}
         highScore={this.state.highScore}/>
-        <Peoplecard />
+        <div className='container'>
+          <div className='row'>
+            {this.state.people.map(people => {
+              return (
+                <div key={people.id}>
+                <Peoplecard 
+                handleClick={this.handleClick}
+                {...people}/>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
     )
   };
